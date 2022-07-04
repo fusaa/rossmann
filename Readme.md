@@ -5,6 +5,7 @@ This project was carried using the Rossmann dataset available at kaggle. The dat
 The goal was to come up with a model to predict the sales for the next 6 weeks.
 Besides the machine learning project it was developed a bot that runs on Heroku. The bot returns the prediction of each store. The bot can be accessed very easily by Telegram. The user just type the store number from his mobile phone to the telegram bot and it returns the prediction for that store.
 
+You can check the complete Jupyter notebook for this project ![here](https://github.com/fusaa/rossmann/blob/main/0%20-%20project.ipynb)
 
 # Data
 
