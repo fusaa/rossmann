@@ -1,9 +1,7 @@
 
 # Kaggle Rossmann dataset store sales prediction
 
-This project was carried using the Rossmann dataset available at kaggle. The data contains daily sales for each store of the european drugstore chain.
-The goal was to come up with a model to predict the sales for the next 6 weeks.
-Besides the machine learning project it was developed a bot that runs on Heroku. The bot returns the prediction of each store. The bot can be accessed very easily by Telegram. The user just type the store number from his mobile phone to the telegram bot and it returns the prediction for that store.
+This project was carried using the Rossmann dataset available at kaggle. The data contains daily sales for each store of the european drugstore chain. The goal was to come up with a model to predict the sales for the next 6 weeks. Besides the machine learning project it was developed a bot that runs on Heroku. The bot returns the prediction of each store. The bot can be accessed very easily by Telegram. The user just type the store number from his mobile phone to the telegram bot and it returns the prediction for that store.
 
 You can check the complete Jupyter notebook for this project ![here](https://github.com/fusaa/rossmann/blob/main/0%20-%20project.ipynb)
 
@@ -33,21 +31,20 @@ You can check the complete Jupyter notebook for this project ![here](https://git
 
 # Data Description
 
-Understanding the data is fundamental in order to develop a model. 
-So in the first sections of the project the data has been described, which provided us a basic undestanding
-of the data. Outliers were checked, missing data treated. Data was also split into numerical and categorical.
+Understanding the data is fundamental to develop a model. 
+So in the first sections of the project, the data was described, which provided us with a basic understanding
+of the data. Outliers were checked, and missing data was treated. Data was also split into numerical and categorical.
 
 # Feature Engineering
 
-At first it was done a brainstorm of ideas about the bussiness with the aim 
-of helping better hypothesis formulation..
+At first, a brainstorm of ideas about the business was sketched, with the aim of helping better hypothesis formulation.
 
 # Exploratory Data Analysis
 
-At this step it has been conducted univariate, bivariate and multivariata analysis. 
-Some hypothesis were tested:
+At this step, univariate, bivariate and multivariate analyses were checked. 
+Some hypotheses were tested:
 
-![](./readme/hypothesis_summary.png)
+![](./readme/hypothesis_summary.png)  
 # Machine Learning Modeling
 
 Models evaluated:
@@ -57,19 +54,15 @@ Data tested against the provided test dataset yielded the following results:
 
 ![](./readme/single_performance_results.png)
 
-## Cross Validation
+## Cross-Validation
 
-Cross validation was performed on tested models, the dataset was spread in 5 tests,
-each one beggining at the end went backwards 6 weeks each time, always testing the next previous period for the 
-data(check cross_validation function). The following results were obtained:
+Cross-validation was performed on tested models; the dataset was spread over five tests, each one beginning at the end went backwards six weeks each time, constantly trying the next previous period for the data(check cross_validation function). The following results were obtained:
 
 ![](./readme/cross_validation_performance.png)
 
 ## Hyperparameter Fine Tuning
 
-It was tried to improve the initial model by using Random Search, were evaluated 10 different
-possibilities,  the tests were able to find a lesser error on the cross validation tests than the one in the model 
-used before, even thoudh RMSE is the goal metric, because of the better error it has been decided to keep the new one.
+It was tried to improve the initial model by using Random Search, were evaluated 10 different possibilities; the tests were able to find a lesser error on the cross-validation tests than the one in the model used before, even though RMSE is the goal metric, because of the better error it has been decided to keep the new one.  
 Final results for Random Search:
 
 ![](./readme/random_search_param_attempts.png)
@@ -82,7 +75,7 @@ Final results for Random Search:
 
 # Translating and Interpreting the error
 
-It has been considered for the choice of the best trained model the RMSE and its error throught the cross validation process.
+It has been considered for the choice of the best trained model the RMSE and its error through the cross-validation process.
 
 Mean Average Percentage Error according to the store has been put into a graphic:
 
@@ -90,14 +83,13 @@ Mean Average Percentage Error according to the store has been put into a graphic
 
 # Machine Learning Model Performance
 
-Error rate was also plotted, there are moments the error can oscilate depending on the prediction. 
-When observing the Sales and Prediction points it is possible to see how well the prediction model fit. It can be further improved following a CRISP methodology a next improvement cycle.
+The error rate was also plotted. There are moments the error can oscillate depending on the prediction. 
+When observing the Sales and Prediction points, it is possible to see how well the prediction model fit. It can be further improved following a CRISP methodology and the subsequent improvement cycle.
 
 ![](./readme/machine_learning_model_performance.png)
 
-# Deploy production model
-
-Model has been deployed using Heroku. Both the Chatbot and the API Handler are hosted at Heroku.
+# Deploy production model  
+The model has been deployed using Heroku. Both the Chatbot and the API Handler are hosted at Heroku.
 You can find the coding files within this repository.
 
 ![](./readme/diagram.jpg)
